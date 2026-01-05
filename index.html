@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Banika 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="intro" class="page show">
+  <h3>Tap anywhere to start 💖</h3>
+  <video id="introVideo" src="intro.mp4" playsinline muted></video>
+</section>
+
+<section id="card" class="page">
+  <img src="card.png" class="card-img">
+  <p class="consent">
+    We’ll record a short <b>20-second birthday memory video (camera & mic)</b> to save this moment 💖
+  </p>
+  <button id="startBtn">Generate My Card</button>
+</section>
+
+<section id="loader" class="page">
+  <div class="spinner"></div>
+  <p>Generating your card…</p>
+</section>
+
+<section id="surprise" class="page">
+  <!-- Fullscreen surprise video -->
+  <video id="surpriseVideo" src="surprise.mp4" playsinline></video>
+  <!-- Tiny live camera preview -->
+  <video id="camPreview" muted playsinline></video>
+</section>
+
+<section id="end" class="page">
+  <h2>Your birthday memory has been saved 💝</h2>
+</section>
+
+<script src="app.js"></script>
+<script>
+// Unlock autoplay on first tap (mobile requirement)
+document.addEventListener("click", ()=>{
+  const v = document.getElementById("introVideo");
+  if(v){ v.muted = false; v.play(); }
+},{ once:true });
+</script>
+</body>
+</html>
