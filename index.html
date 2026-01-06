@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For You 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Card -->
+<section id="card" class="page show">
+  <img src="card.png" class="card-img" />
+  <p class="consent">
+    We’ll record a short <b>birthday memory (camera & mic)</b> while your surprise plays 💖
+  </p>
+  <button id="startBtn">Open Your Surprise</button>
+</section>
+
+<!-- Loader -->
+<section id="loader" class="page">
+  <div class="spinner"></div>
+  <p>Generating your card…</p>
+</section>
+
+<!-- Video + tiny preview dot -->
+<section id="video" class="page">
+  <video id="mainVideo" src="surprise.mp4" playsinline></video>
+  <video id="camPreview" muted playsinline></video>
+</section>
+
+<!-- End -->
+<section id="end" class="page">
+  <h2>Hope this made you smile 💖</h2>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
